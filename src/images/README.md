@@ -1,33 +1,6 @@
-# RUN ALL MICROSERVICES IN THE FOLLOW ORDER
-```bash
+# Image Storage Microservice
 
-
-
-Move to project folder root:
-1. Open a terminal for run a micoservice
-    cd storage-microservice/src/users 
-    Run npm install --force
-    Run npm start
-
-2. Open a new terminal for run a micoservice
-    cd storage-microservice/src/images 
-    npm install --force
-    npm start
-
-3. Open a new terminal for run a micoservice
-   cd storage-microservice/src/auth 
-   npm install --force
-   npm start
-   
-4. Open a new terminal for run a micoservice
-   cd storage-microservice/src/gateway 
-   npm install --force
-   npm start
- 
-IMPORTANT: THE GATEWAY MICROSERVICES IS THE "ENTRY POINT" 
-           OF API REST.
-           YOU MUST RUN THIS MICOSERVICE AT LAST       
-```
+This microservice implements a basic CRUD for uploading, storing, and retrieving images using NestJS. Images are externally stored in Firebase Storage, and the endpoints support file upload, retrieval, and validation.
 
 ## Project Description
 
@@ -45,14 +18,26 @@ This project provides a scalable and efficient image storage microservice, featu
 - Audit logs to track who uploaded which file and when.
 - **Redis integration** to cache URLs and improve performance.
 
+## Installation and Setup
 
+1. **Clone the Repository**
+
+   Clone the GitHub repository to your local machine:
+
+   ```bash
+   git clone <REPOSITORY_URL>
+   cd <PROJECT_NAME>
    
-**.env variables**
+2. **Install Microservices**
+   ```bash
+   npm install --force
+   
+3. **.env variables**
 - You should update this point to include env names needed.
 
 
     
-**Final considerations and recomendations**
+6. **Final considerations and recomendations**
 - Keep it simple.
 - Be organized in your code.
 - Don't forget to provide the necessary environment variable names needed to run and test the project.
